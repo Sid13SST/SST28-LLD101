@@ -1,7 +1,5 @@
 package com.snakeandladder;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,17 +13,10 @@ public class Main {
         System.out.print("Enter the number of players (x): ");
         int numPlayers = scanner.nextInt();
         
-        System.out.print("Enter difficulty level (easy/hard): ");
+        System.out.print("Enter difficulty level (easy/difficult): ");
         String difficulty = scanner.next();
         
-        List<Player> players = new ArrayList<>();
-        for (int i = 1; i <= numPlayers; i++) {
-            players.add(new Player("Player " + i));
-        }
-        
-        Board board = new Board(n, difficulty);
-        Dice dice = new Dice(1); // 1 six-sided dice
-        Game game = new Game(board, dice, players);
+        Game game = Game.createGame(n, numPlayers, difficulty);
         
         System.out.println("\nStarting the game...");
         game.play();

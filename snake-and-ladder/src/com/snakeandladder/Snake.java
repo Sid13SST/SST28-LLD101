@@ -1,6 +1,6 @@
 package com.snakeandladder;
 
-public class Snake {
+public class Snake implements Jump {
     private int head;
     private int tail;
 
@@ -11,4 +11,19 @@ public class Snake {
 
     public int getHead() { return head; }
     public int getTail() { return tail; }
+
+    @Override
+    public int getStartPosition() {
+        return head;
+    }
+
+    @Override
+    public int getEndPosition() {
+        return tail;
+    }
+
+    @Override
+    public String getJumpMessage() {
+        return "Player bitten by snake at " + head + "! Going down to " + tail;
+    }
 }
