@@ -1,12 +1,5 @@
 # Parking Lot System - Low Level Design (LLD)
 
-## Problem Statement
-Design a Parking Lot System with multiple levels, multiple entry/exit gates, different vehicle sizing, closest-slot assignment logic, billing logic, and status display.
-
-## System Architecture & LLD Class Diagram
-
-Below is the UML class diagram representing the structural backbone of the Parking Lot Application.
-
 ```mermaid
 classDiagram
     class ParkingLot {
